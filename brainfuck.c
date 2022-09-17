@@ -1,3 +1,10 @@
+/*
+ * Name: Brainfuck Interpreter in C
+ * Repository: https://github.com/BaseMax/BrainfuckInterpreterC
+ * Author: Max Base
+ * Date: 2022/09/17
+ */
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -43,53 +50,6 @@ char* interpret(char* bf)
     int output_pointer = 0;
 
     // loop through input
-    // i = 0
-    // while i < len(input):
-    //     # print("i: {}, input[i]: {}, memory: {}, pointer: {}".format(i, input[i], memory, pointer))
-    //     # >	Move the pointer to the right
-    //     if input[i] == ">":
-    //         pointer += 1
-    //     # <	Move the pointer to the left
-    //     elif input[i] == "<":
-    //         pointer -= 1
-    //     # +	Increment the memory cell at the pointer
-    //     elif input[i] == "+":
-    //         memory[pointer] += 1
-    //     # -	Decrement the memory cell at the pointer
-    //     elif input[i] == "-":
-    //         memory[pointer] -= 1
-    //     # .	Output the character signified by the cell at the pointer
-    //     elif input[i] == ".":
-    //         output += chr(memory[pointer])
-    //     # ,	Input a character and store it in the cell at the pointer
-    //     elif input[i] == ",":
-    //         memory[pointer] = ord(input())
-    //     # [	Jump past the matching ] if the cell at the pointer is 0
-    //     elif input[i] == "[":
-    //         if memory[pointer] == 0:
-    //             # find matching ]
-    //             count = 1
-    //             while count > 0:
-    //                 i += 1
-    //                 if input[i] == "[":
-    //                     count += 1
-    //                 elif input[i] == "]":
-    //                     count -= 1
-    //     # ]	Jump back to the matching [ if the cell at the pointer is nonzero
-    //     elif input[i] == "]":
-    //         if memory[pointer] != 0:
-    //             # find matching [
-    //             count = 1
-    //             while count > 0:
-    //                 i -= 1
-    //                 if input[i] == "]":
-    //                     count += 1
-    //                 elif input[i] == "[":
-    //                     count -= 1
-    //     else:
-    //         pass
-    //     i += 1
-
     int i = 0;
     while (i < strlen(bf)) {
         // >	Move the pointer to the right
